@@ -23,6 +23,15 @@ Configuration
         fade_time: 2
         time_to_expire: 30 days
 
+Routing
+-------
+
+.. code-block:: yaml
+
+    accept_gdpr_consent_banner:
+      path: /accept-gdpr-consent-banner
+      controller: Msalsas\GdprConsentBannerBundle\Controller\MsalsasGdprConsentBannerController:acceptGdprConsentBanner
+      methods: POST
 
 Usage
 -----
