@@ -16,6 +16,9 @@
             <directory>./</directory>
             <exclude>
                 <directory>./MsalsasGdprConsentBannerBundle.php</directory>
+                <directory>./Controller</directory>
+                <directory>./DependencyInjection</directory>
+                <directory>./Resources</directory>
                 <directory>./Tests</directory>
                 <directory>./vendor</directory>
             </exclude>
