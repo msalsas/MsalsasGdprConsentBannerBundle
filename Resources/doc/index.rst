@@ -13,7 +13,7 @@ Install
 
 .. code-block:: bash
 
-'' composer require msalsas/gdpr-consent-banner-bundle
+    composer require msalsas/gdpr-consent-banner-bundle
 
 Configuration
 -------------
@@ -34,9 +34,9 @@ Routing
 .. code-block:: yaml
 
     accept_gdpr_consent_banner:
-      path: /accept-gdpr-consent-banner
-      controller: Msalsas\GdprConsentBannerBundle\Controller\MsalsasGdprConsentBannerController:acceptGdprConsentBanner
-      methods: POST
+        path: /accept-gdpr-consent-banner
+        controller: Msalsas\GdprConsentBannerBundle\Controller\MsalsasGdprConsentBannerController:acceptGdprConsentBanner
+        methods: POST
 
 Usage
 -----
