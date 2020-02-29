@@ -1,5 +1,5 @@
 {
-  "name": "msalsas/gdpr/consent/banner-bundle",
+  "name": "msalsas/gdpr-consent-banner-bundle",
   "type": "symfony-bundle",
   "description": "Symfony bundle for adding a GDPR consent banner",
   "keywords": ["gdpr", "consent", "banner"],
