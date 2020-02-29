@@ -8,18 +8,23 @@ Prerequisites
 
 This version of the bundle requires Symfony 4.0+.
 
+Install
+-------
+
+.. code-block:: bash
+
+'' composer require msalsas/gdpr-consent-banner-bundle
+
 Configuration
 -------------
 
 .. code-block:: yaml
 
     msalsas_gdpr_consent_banner:
-        css: default [default|none]
-        has_translations: false [true|false]
-        text_message: "By using our site, you acknowledge that you have read and understand our <a class="msalsas_gdpr_consent_banner_link" target="_blank" href="https://{$domain}/legal/cookie-policy">Cookie Policy</a>,
-            \ <a class="msalsas_gdpr_consent_banner_link" target="_blank" href="https://{$domain}/legal/privacy-policy">Privacy Policy</a>,
-            \ and our <a class="msalsas_gdpr_consent_banner_link" target="_blank" href="https://{$domain}/legal/terms-of-service/public">Terms of Service</a>." [{message}|{key}]
-        accept_message: "OK" [{message}|{key}]
+        css: default # [default|none]
+        has_translations: true # [true|false]
+        text_message: '' # [{message}] Only if has_translations is false
+        accept_message: '' # [{message}] Only if has_translations is false
         fade_time: 2
         time_to_expire: 30 days
 
