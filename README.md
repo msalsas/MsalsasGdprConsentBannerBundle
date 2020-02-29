@@ -12,7 +12,7 @@ Features include:
 - Default or custom messages.
 - Custom time to fade banner on close.
 
-[![Build Status](https://travis-ci.org/msalsas/MsalsasGdprConsentBannerBundle.svg?branch=master)](https://travis-ci.org/msalsas/MsalsasGdprConsentBannerBundle) [![Code Coverage](https://scrutinizer-ci.com/g/msalsas/MsalsasGdprConsentBannerBundle/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/msalsas/MsalsasGdprConsentBannerBundle/?branch=master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/msalsas/MsalsasGdprConsentBannerBundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/msalsas/MsalsasGdprConsentBannerBundle/?branch=master) [![Latest Stable Version](https://poser.pugx.org/msalsas/voting-bundle/v/stable.svg)](https://packagist.org/packages/msalsas/voting-bundle)
+[![Build Status](https://travis-ci.org/msalsas/MsalsasGdprConsentBannerBundle.svg?branch=master)](https://travis-ci.org/msalsas/MsalsasGdprConsentBannerBundle) [![Code Coverage](https://scrutinizer-ci.com/g/msalsas/MsalsasGdprConsentBannerBundle/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/msalsas/MsalsasGdprConsentBannerBundle/?branch=master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/msalsas/MsalsasGdprConsentBannerBundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/msalsas/MsalsasGdprConsentBannerBundle/?branch=master) [![Latest Stable Version](https://poser.pugx.org/msalsas/gdpr-consent-banner-bundle/v/stable.svg)](https://packagist.org/packages/msalsas/gdpr-consent-banner-bundle)
 
 Documentation
 -------------
