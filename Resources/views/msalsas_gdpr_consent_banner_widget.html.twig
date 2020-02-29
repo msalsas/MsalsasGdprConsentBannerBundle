@@ -1,0 +1,56 @@
+{% macro gdpr_consent_banner_macro(text_message, accept_message, has_translations, css, fade_time) %}
+    <div id="msalsas-gdpr-consent-banner-widget-wrapper">
+        <div id="msalsas-gdpr-consent-banner-widget">
+            <div id="msalsas-gdpr-consent-banner-text">
+                {{ has_translations ? text_message|trans|raw : text_message|raw }}
+            </div>
+            <div id="msalsas-gdpr-consent-banner-link-wrapper">
+                <a id="msalsas-gdpr-consent-banner-link" href="{{ path('accept_gdpr_consent_banner') }}">{{ has_translations ? accept_message|trans|raw : accept_message|raw }}</a>
+            </div>
+        </div>
+    </div>
+    <style>
+        {% include '@msalsas_gdpr_consent_banner.public/css/hide-transition.css.twig' with {fade_time: fade_time} %}
+        {% if css == 'default' %}
+            {% include '@msalsas_gdpr_consent_banner.public/css/default.css' %}
+        {% elseif css == 'none' %}
+            /* No styles */
+        {% endif %}
+    </style>
+    <script>
+        (function () {
+            document.addEventListener('DOMContentLoaded', function() {
+                var linkElem = document.getElementById("msalsas-gdpr-consent-banner-link");
+                if (linkElem.addEventListener) {
+                    linkElem.addEventListener('click', accepted, false);
+                } else {
+                    linkElem.attachEvent('onclick', accepted);
+                }
+            });
+            function accepted(evt) {
+                evt.preventDefault();
+                var url = evt.currentTarget.href;
+                var http = new XMLHttpRequest();
+                http.open('POST', url, true);
+                http.setRequestHeader('Content-type', 'application/json');
+                http.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+
+                http.onreadystatechange = function() {
+                    var fullWrapper = document.getElementById('msalsas-gdpr-consent-banner-widget-wrapper');
+                    fullWrapper.className = 'msalsas-gdpr-consent-banner-hidden';
+                };
+                http.send();
+            }
+        })();
+    </script>
+{% endmacro gdpr_consent_banner_macro %}
+
+{% set text_message     = 'msalsas_gdpr_consent_banner.text_message' %}
+{% set accept_message   = 'msalsas_gdpr_consent_banner.accept_message' %}
+{% set has_translations = msalsas_gdpr_consent_banner.has_translations %}
+{% set css              = msalsas_gdpr_consent_banner.css %}
+{% set fade_time        = msalsas_gdpr_consent_banner.fade_time %}
+
+{% if not app.request.cookies.get('msalsas-gdpr-consent-banner') %}
+    {{ _self.gdpr_consent_banner_macro(text_message, accept_message, has_translations, css, fade_time) }}
+{% endif %}

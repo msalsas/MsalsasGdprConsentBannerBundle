@@ -1,0 +1,18 @@
+#msalsas-gdpr-consent-banner-widget-wrapper {
+    background-color: rgba(109, 130, 131, 0.9);
+    bottom: 0;
+    color: #dddddd;
+    line-height: 60px;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    z-index: 9999;
+}
+#msalsas-gdpr-consent-banner-text {
+    display: inline-block;
+    margin-right: 50px;
+}
+#msalsas-gdpr-consent-banner-link-wrapper {
+    display: inline-block;
+    vertical-align: sub;
+}

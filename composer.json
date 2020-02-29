@@ -1,0 +1,54 @@
+{
+  "name": "msalsas/gdpr/consent/banner-bundle",
+  "type": "symfony-bundle",
+  "description": "Symfony bundle for adding a GDPR consent banner",
+  "keywords": ["gdpr", "consent", "banner"],
+  "homepage": "https://github.com/msalsas/MsalsasGdprConsentBannerBundle",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Manolo Salsas",
+      "email": "manolez@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.2",
+    "symfony/framework-bundle": ">=4.0",
+    "symfony/yaml": ">=4.0"
+  },
+  "require-dev": {
+    "symfony/phpunit-bridge": ">=4.0"
+  },
+  "config": {
+    "platform": {
+      "php": "7.2"
+    },
+    "preferred-install": {
+      "*": "dist"
+    },
+    "sort-packages": true
+  },
+  "autoload": {
+    "psr-4": {
+      "Msalsas\\GdprConsentBannerBundle\\": ""
+    },
+    "exclude-from-classmap": [
+      "/Tests/"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Msalsas\\GdprConsentBannerBundle\\Tests\\": "tests/"
+    }
+  },
+  "conflict": {
+    "symfony/symfony": "<4.0"
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.1.x-dev"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}

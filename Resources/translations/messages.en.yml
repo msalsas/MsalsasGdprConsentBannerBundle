@@ -1,0 +1,7 @@
+msalsas_gdpr_consent_banner:
+    text_message: By using our site, you acknowledge that you have read and understand our <a class="msalsas_gdpr_consent_banner_link" target="_blank" href="/legal/cookie-policy">Cookie Policy</a>,
+          <a class="msalsas_gdpr_consent_banner_link" target="_blank" href="/legal/privacy-policy">Privacy Policy</a>
+          and our <a class="msalsas_gdpr_consent_banner_link" target="_blank" href="/legal/terms-of-service/public">Terms of Service</a>.
+    accept_message: <div class="msalsas_gdpr_consent_banner_accept_message_wrapper">
+          <svg width="18" height="18" viewBox="0 0 18 18"><path d="M15 4.41L13.59 3 9 7.59 4.41 3 3 4.41 7.59 9 3 13.59 4.41 15 9 10.41 13.59 15 15 13.59 10.41 9 15 4.41z"></path></svg>
+          </div>

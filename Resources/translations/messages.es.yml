@@ -1,0 +1,4 @@
+msalsas_gdpr_consent_banner:
+    text_message: Usando este sitio web, confirmas que has leído y aceptas nuestra <a class="msalsas_gdpr_consent_banner_link" target="_blank" href="/es/legal/cookie-policy">Política de cookies</a>,
+        <a class="msalsas_gdpr_consent_banner_link" target="_blank" href="/es/legal/privacy-policy">Política de Privacidad</a>
+        y nuestros <a class="msalsas_gdpr_consent_banner_link" target="_blank" href="/es/legal/terms-of-service/public">Terminos de Servicio</a>.

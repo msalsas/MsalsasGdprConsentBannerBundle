@@ -1,0 +1,26 @@
+.msalsas-gdpr-consent-banner-hidden {
+    opacity: 0;
+    -webkit-animation: fadeout {{ fade_time }}s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadeout {{ fade_time }}s; /* Firefox < 16 */
+    -o-animation: fadeout {{ fade_time }}s; /* Opera < 12.1 */
+    animation: fadeout {{ fade_time }}s;
+}
+@keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+/* Firefox < 16 */
+@-moz-keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+/* Internet Explorer */
+@-ms-keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
