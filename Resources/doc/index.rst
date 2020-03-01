@@ -20,6 +20,7 @@ Configuration
 
 .. code-block:: yaml
 
+    # config/packages/msalsas_gdpr_consent_banner.yaml
     msalsas_gdpr_consent_banner:
         css: default # [default|none]
         has_translations: true # [true|false]
@@ -33,6 +34,7 @@ Routing
 
 .. code-block:: yaml
 
+    # config/routes/msalsas_gdpr_consent_banner.yaml
     accept_gdpr_consent_banner:
         path: /accept-gdpr-consent-banner
         controller: Msalsas\GdprConsentBannerBundle\Controller\MsalsasGdprConsentBannerController:acceptGdprConsentBanner
