@@ -18,14 +18,14 @@ class MsalsasGdprConsentBannerExtensionTest extends TestCase
         $this->configuration = null;
     }
 
-    public function test_no_config_should_throw_exception()
+    public function test_no_config_should_have_default_options()
     {
         $this->configuration = new ContainerBuilder();
         $loader = new MsalsasGdprConsentBannerExtension();
         $config = $this->getEmptyConfig();
 
-        $this->expectException(InvalidConfigurationException::class);
         $loader->load(array($config), $this->configuration);
+        $this->assertParameter('default', 'msalsas_gdpr_consent_banner.css');
     }
 
     public function test_invalid_has_translations_should_throw_exception()
