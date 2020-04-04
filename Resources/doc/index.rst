@@ -24,8 +24,8 @@ Configuration
     msalsas_gdpr_consent_banner:
         css: default # [default|none]
         has_translations: true # [true|false]
-        text_message: '' # [{message}] Only if has_translations is false
-        accept_message: '' # [{message}] Only if has_translations is false
+        text_message: '' # [{message}|{key}]
+        accept_message: '' # [{message}|{key}]
         fade_time: 2
         time_to_expire: 30 days
 

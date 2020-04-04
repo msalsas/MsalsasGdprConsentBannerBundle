@@ -32,6 +32,8 @@ class MsalsasGdprConsentBannerExtension extends Extension implements PrependExte
         $twigConfig['globals']['msalsas_gdpr_consent_banner']['has_translations'] = $config["has_translations"];
         $twigConfig['globals']['msalsas_gdpr_consent_banner']['css'] = $config["css"];
         $twigConfig['globals']['msalsas_gdpr_consent_banner']['fade_time'] = $config["fade_time"];
+        $twigConfig['globals']['msalsas_gdpr_consent_banner']['text_message'] = $config["text_message"];
+        $twigConfig['globals']['msalsas_gdpr_consent_banner']['accept_message'] = $config["accept_message"];
         $twigConfig['paths'][__DIR__.'/../Resources/views'] = "msalsas_gdpr_consent_banner";
         $twigConfig['paths'][__DIR__.'/../Resources/public'] = "msalsas_gdpr_consent_banner.public";
         $container->prependExtensionConfig('twig', $twigConfig);

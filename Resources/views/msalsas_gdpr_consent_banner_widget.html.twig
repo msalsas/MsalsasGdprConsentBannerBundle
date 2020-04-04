@@ -2,10 +2,10 @@
     <div id="msalsas-gdpr-consent-banner-widget-wrapper">
         <div id="msalsas-gdpr-consent-banner-widget">
             <div id="msalsas-gdpr-consent-banner-text">
-                {{ has_translations ? text_message|trans|raw : text_message|raw }}
+                {{ text_message|raw }}
             </div>
             <div id="msalsas-gdpr-consent-banner-link-wrapper">
-                <a id="msalsas-gdpr-consent-banner-link" href="{{ path('accept_gdpr_consent_banner') }}">{{ has_translations ? accept_message|trans|raw : accept_message|raw }}</a>
+                <a id="msalsas-gdpr-consent-banner-link" href="{{ path('accept_gdpr_consent_banner') }}">{{ accept_message|raw }}</a>
             </div>
         </div>
     </div>
@@ -45,11 +45,15 @@
     </script>
 {% endmacro gdpr_consent_banner_macro %}
 
-{% set text_message     = 'msalsas_gdpr_consent_banner.text_message' %}
-{% set accept_message   = 'msalsas_gdpr_consent_banner.accept_message' %}
+{% set text_message     = msalsas_gdpr_consent_banner.text_message %}
+{% set accept_message   = msalsas_gdpr_consent_banner.accept_message %}
 {% set has_translations = msalsas_gdpr_consent_banner.has_translations %}
 {% set css              = msalsas_gdpr_consent_banner.css %}
 {% set fade_time        = msalsas_gdpr_consent_banner.fade_time %}
+{% if has_translations %}
+    {% set text_message   = text_message ? text_message|trans : 'msalsas_gdpr_consent_banner.text_message'|trans %}
+    {% set accept_message = accept_message ? accept_message|trans : 'msalsas_gdpr_consent_banner.accept_message'|trans %}
+{% endif %}
 
 {% if not app.request.cookies.get('msalsas-gdpr-consent-banner') %}
     {{ _self.gdpr_consent_banner_macro(text_message, accept_message, has_translations, css, fade_time) }}
